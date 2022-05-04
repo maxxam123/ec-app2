@@ -9,6 +9,7 @@ import ProductList from './pages/ProductList';
 import Product from './pages/Product';
 import { useSelector } from 'react-redux';
 import Login from './pages/Login';
+import Cart from './pages/Cart';
 
 function App() {
   const user = useSelector((state) => state.user.currentUser);
@@ -26,6 +27,7 @@ function App() {
         <Route path="/product/:id">
           {user ? <Product /> : <Redirect to="/login" />}
         </Route>
+        <Route path="/cart">{user ? <Cart /> : <Redirect to="/login" />}</Route>
       </Switch>
     </Router>
   );
