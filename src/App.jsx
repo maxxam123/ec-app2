@@ -5,13 +5,17 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
+import ProductList from './pages/ProductList';
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route>
+        <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="/products/:category">
+          <ProductList />
         </Route>
       </Switch>
     </Router>
