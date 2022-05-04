@@ -1,4 +1,5 @@
-import { publicRequest } from '../requestMethod';
+// import { publicRequest } from '../requestMethod';
+import axios from 'axios';
 import {
   loginFailure,
   loginStart,
@@ -10,7 +11,7 @@ import { logoutProduct } from './cartRedux';
 export const login = async (dispatch, user) => {
   dispatch(loginStart());
   try {
-    const res = await publicRequest.post('/auth/login', user);
+    const res = await axios.post('http://localhost:5000/api/auth/login', user);
     dispatch(loginSuccess(res.data));
   } catch (err) {
     dispatch(loginFailure());

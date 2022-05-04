@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 // import Announcement from '../components/Announcement';
 // import Footer from '../components/Footer';
-// import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar';
 // import NewsLetter from '../components/NewsLetter';
 import Products from '../components/Products';
 
@@ -54,7 +54,7 @@ const ProductList = () => {
 
   return (
     <Container>
-      {/* <Navbar /> */}
+      <Navbar />
       {/* <Announcement /> */}
       <Title>Dresses</Title>
       <FilterContainer>
