@@ -5,7 +5,7 @@ import styled from 'styled-components';
 // import Footer from '../components/Footer';
 // import Navbar from '../components/Navbar';
 // import NewsLetter from '../components/NewsLetter';
-// import Products from '../components/Products';
+import Products from '../components/Products';
 
 const Container = styled.div``;
 
@@ -87,7 +87,7 @@ const ProductList = () => {
           </Select>
         </Filter>
       </FilterContainer>
-      {/* <Products cat={cat} filters={filters} sort={sort} /> */}
+      <Products cat={cat} filters={filters} sort={sort} />
       {/* <NewsLetter /> */}
       {/* <Footer /> */}
     </Container>
